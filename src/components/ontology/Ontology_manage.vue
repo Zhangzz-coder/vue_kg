@@ -8,7 +8,7 @@
     <!-- 卡片视图区域 -->
     <el-card class="box-card">
       <!-- 按钮区 -->
-      <el-button size="small">创建本体</el-button>
+      <el-button size="small" @click="createOntology">创建本体</el-button>
       <el-button size="small">批量导入</el-button>
       <el-button size="small">删除</el-button>
       <!-- 列表区域 -->
@@ -114,6 +114,10 @@ export default {
     handleCurrentChange (newPage) {
       this.queryInfo.pagenum = newPage
       this.getOntologyList()
+    },
+    // 点击“创建本体”按钮进行页面跳转
+    createOntology () {
+      this.$router.push('ontology_manage/create_ontology')
     }
   }
 }

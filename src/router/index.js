@@ -4,6 +4,7 @@ import Login from '../components/Login'
 import Home from '../components/Home'
 import Welcome from '../components/Welcome'
 import OntologyManage from '../components/ontology/Ontology_manage'
+import CreateOntology from '../components/ontology/Create_ontology'
 
 Vue.use(Router)
 
@@ -18,7 +19,8 @@ const router = new Router({
       redirect: '/welcome',
       children: [
         { path: '/welcome', component: Welcome },
-        { path: '/ontology_manage', component: OntologyManage }
+        { path: '/ontology_manage', component: OntologyManage },
+        { path: '/ontology_manage/create_ontology', component: CreateOntology }
       ]
     }
   ]
